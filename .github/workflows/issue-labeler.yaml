@@ -5,6 +5,7 @@ on:
 
 jobs:
   label-issues:
+    if: github.repository_owner == 'subject-test'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
