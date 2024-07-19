@@ -8,6 +8,7 @@ on:
 jobs:
   trigger-fork:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'subject-test'
     steps:
       - name: Trigger repository_dispatch
         run: |
