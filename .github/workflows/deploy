@@ -1,0 +1,20 @@
+name: Update Fork and Deploy
+
+on:
+  repository_dispatch:
+    types: [main_updated]
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.repository == 'humonnom/ci-cd-forked'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync fork
+        run: |
+          git remote add upstream https://github.com/subject-test/ci-cd.git
+          git fetch upstream
+          git checkout main
+          git merge upstream/main
+          git push origin main
+
