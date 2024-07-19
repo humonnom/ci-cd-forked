@@ -3,5 +3,8 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <h1>App Router</h1>;
+  return (<div>
+    <h1>This is not an</h1>
+    <h1>App Router</h1>
+  </div>);
 }
