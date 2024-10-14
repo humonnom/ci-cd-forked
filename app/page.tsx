@@ -9,6 +9,7 @@ export default function Page() {
       <h1>App Router!</h1>
       <p>Let's trigger workflow</p>
       <p>update vercel</p>
+      <p>final test</p>
     </div>
   );
 }
